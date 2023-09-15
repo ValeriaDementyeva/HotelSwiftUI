@@ -1,28 +1,29 @@
 //
-//  HomeHotel.swift
+//  ReservationRoom.swift
 //  HotelSwiftUI
 //
 //  Created by Валерия Дементьева on 15.09.2023.
 //
 
-
 import SwiftUI
 
-struct HomeHotel: View {
+struct ReservationRoom: View {
     let columns = [GridItem(.flexible())]
-
     var body: some View {
-        NavigationView {
+      
             ScrollView{
                 LazyVGrid(columns: columns, spacing: 8) {
-                    HomeHotelSectionOne()
-                    HomeHotelSectionTwo()
 
+                    ReservationRoomSectionOne()
+                    ReservationRoomSectionTwo()
+                    ReservationRoomSectionThree()
+                    ReservationRoomSectionFour()
+                    ReservationRoomSectionFive()
+                    ReservationRoomSectionSix()
+                    ReservationRoomSectionSeven()
                 }
             }
             .background(Color.gray.opacity(0.2))
-
-            .navigationBarTitle("Отель", displayMode: .inline)
             .toolbar {
                 ToolbarItem(placement: .bottomBar) {
                     NavigationLink {
@@ -31,8 +32,8 @@ struct HomeHotel: View {
                             .navigationBarTitle("Название отеля", displayMode: .inline)
 //                            .navigationBarBackButtonHidden(true)
                     } label: {
-                        
-                        Text("К выбору номера")
+
+                        Text("Оплатить")
                             .font(.system(size: 16))
                             .fontWeight(.bold)
                             .foregroundColor(.white)
@@ -44,13 +45,12 @@ struct HomeHotel: View {
                     }
                 }
             }
-        }
+
     }
 }
 
-
-struct HomeHotel_Previews: PreviewProvider {
+struct ReservationRoom_Previews: PreviewProvider {
     static var previews: some View {
-        HomeHotel()
+        ReservationRoom()
     }
 }

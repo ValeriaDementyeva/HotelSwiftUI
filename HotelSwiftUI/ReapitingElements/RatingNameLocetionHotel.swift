@@ -36,6 +36,8 @@ struct RatingNameLocetionHotel: View {
 
 
         }// VStack
+//        .padding(10)
+               .frame(maxWidth: .infinity)
     }
 }
 
