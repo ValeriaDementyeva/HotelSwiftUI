@@ -47,7 +47,7 @@ struct ServicesHomeHotel: View {
         .frame(height: 180)
 
         .sheet(isPresented: $isPresented) {
-            HotelInformation()
+//            HotelInformation(activateRootLink: $activateRootLink)
         }
         //        List(services) { service in
         //            Button {

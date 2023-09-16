@@ -9,6 +9,8 @@ import SwiftUI
 
 struct RoomsHotel: View {
     let columns = [GridItem(.flexible())]
+
+
     var body: some View {
 //        NavigationView {
             ScrollView{
@@ -28,10 +30,9 @@ struct RoomsHotel: View {
 
                             Price()
 
-                            NavigationLink {
+                            NavigationLink(destination: {
                                 ReservationRoom()
-                                    .navigationBarTitle("Бронирование", displayMode: .inline)
-                            } label: {
+                            }, label: {
                                 Text("Выбрать номер")
                                     .font(.system(size: 16))
                                     .fontWeight(.bold)
@@ -40,7 +41,8 @@ struct RoomsHotel: View {
                                     .padding(12)
                                     .background(Color.blue)
                                     .cornerRadius(15)
-                            }
+                            })
+                            .navigationTitle("Название отеля")
 
                         }
                         .padding(10)

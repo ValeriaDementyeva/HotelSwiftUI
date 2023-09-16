@@ -9,6 +9,8 @@ import SwiftUI
 
 struct ReservationRoom: View {
     let columns = [GridItem(.flexible())]
+
+   
     var body: some View {
       
             ScrollView{
@@ -21,35 +23,37 @@ struct ReservationRoom: View {
                     ReservationRoomSectionFive()
                     ReservationRoomSectionSix()
                     ReservationRoomSectionSeven()
+                    ReservationRoomSectionEight()
                 }
             }
             .background(Color.gray.opacity(0.2))
-            .toolbar {
-                ToolbarItem(placement: .bottomBar) {
-                    NavigationLink {
-                        RoomsHotel()
 
-                            .navigationBarTitle("Название отеля", displayMode: .inline)
+//
+//            .toolbar {
+//                ToolbarItem(placement: .bottomBar) {
+//                    NavigationLink( destination: {
+//                        HotelInformation(activateRootLink: $activateRootLink)
+//                    }, label: {
+//                        Text("К выбору номера")
+//                            .font(.system(size: 16))
+//                            .fontWeight(.bold)
+//                            .foregroundColor(.white)
+//                            .frame(maxWidth: .infinity)
+//                            .padding(12)
+//                            .background(Color.blue)
+//                            .cornerRadius(15)
 //                            .navigationBarBackButtonHidden(true)
-                    } label: {
+//                    })
+                    .navigationTitle("Бронирование")
+//                }}
 
-                        Text("Оплатить")
-                            .font(.system(size: 16))
-                            .fontWeight(.bold)
-                            .foregroundColor(.white)
-                            .frame(maxWidth: .infinity)
-                            .padding(12)
-                            .background(Color.blue)
-                            .cornerRadius(15)
-                            .navigationBarBackButtonHidden(true)
-                    }
-                }
-            }
 
     }
 }
-
+//
 struct ReservationRoom_Previews: PreviewProvider {
+ 
+
     static var previews: some View {
         ReservationRoom()
     }

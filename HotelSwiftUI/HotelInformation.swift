@@ -7,6 +7,7 @@
 import SwiftUI
 
 struct HotelInformation: View {
+   
     var body: some View {
         ZStack{
             Rectangle()
@@ -64,7 +65,9 @@ struct HotelInformation: View {
                 }
             }// VStack
             .padding([.leading, .trailing], 15)
+
         }//ZStack
+        .navigationTitle("проверочный экран")
     }
 }
 
